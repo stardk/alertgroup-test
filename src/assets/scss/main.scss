@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('~@/assets/fonts/GothamPro.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('~@/assets/fonts/Montserrat.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('~@/assets/fonts/OpenSans.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('~@/assets/fonts/OpenSans-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('~@/assets/fonts/OpenSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Palantino Linotype';
+    src: url('~@/assets/fonts/PLinotype.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'PT Serif';
+    src: url('~@/assets/fonts/PTSerif.ttf') format('truetype');
+}
+$white: #ffffff;
+$gold: #C78555;
+$black: #000000;
+
+h1, h3 {
+    margin: 0;
+}
+
+h3 {
+    font-size: 18px;
+}
+h1 {
+    @media screen and (max-width: 767px) {
+        font-size: 24px;
+    }
+}

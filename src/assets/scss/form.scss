@@ -1,0 +1,181 @@
+@import './main.scss';
+
+@mixin fixed-line {
+    position: fixed;
+    margin: 0;
+    height: 100%;
+    width: 5%;
+    max-width: 60px;
+    background-color: $white;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    h1, h5 {
+        font-family: 'Gotham Pro';
+    }
+    h1 {
+        text-transform: uppercase;
+    }
+    p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .header {
+        position: fixed;
+        background-color: $white;
+        width: 100%;
+        height: 80px;
+        z-index: 10;
+        .header__container {
+            position: relative;
+            max-width: 100%;
+            padding: 0 60px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header__logo {
+            font-family: 'Palantino Linotype';
+            font-size: 64px;
+            color: #000000;
+            @media screen and (max-width: 767px) {
+                position: absolute;
+                left: 60px;
+                font-size: 36px;
+            }
+        }
+        .header__button {
+            position: absolute;
+            right: 60px;
+            cursor: pointer;
+            font-family: 'Open Sans';
+            text-transform: uppercase;
+            color: $white;
+            background-color: $gold;
+            border: none;
+            padding: 17px 63px;
+            box-sizing: border-box;
+            border-radius: 2px;
+            @media screen and (max-width: 767px) {
+                padding: 11px 42px;
+            }
+            &:hover {
+                color: #f7ccad;
+            }
+        }
+    }
+    .leftLine {
+        @include fixed-line;
+        top: 0;
+        left: 0;
+    }
+    .rightLine {
+        @include fixed-line;
+        top: 0;
+        right: 0;
+    }
+    .bottomLine {
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        bottom: 0;
+        background-color: $white;
+        z-index: 11;
+    }
+    .content {
+        background-color: #2F2E2D;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 80px 60px 60px 60px;
+        .content__form {
+            margin-top: 180px;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1 {
+                text-align: center;
+            }
+            .error {
+                font-family: 'Open Sans';
+                font-size: 14px;
+                color: #ff3f14;
+            }
+            .content__form__input {
+                padding: 17px;
+                margin-top: 30px;
+                width: 300px;
+                height: 50px;
+                outline: none;
+                background: $white;
+                border: 1px solid #DADCE0;
+                box-sizing: border-box;
+                border-radius: 2px;
+                font-size: 14px;
+                color: $black;
+            }
+            .content__form__button {
+                margin-top: 20px;
+                width: 300px;
+                height: 50px;
+                cursor: pointer;
+                font-family: 'Open Sans';
+                text-transform: uppercase;
+                color: $white;
+                background-color: $gold;
+                border: none;
+                padding: 17px 63px;
+                box-shadow: 0px 10px 20px rgba(199, 133, 85, 0.2);
+                border-radius: 2px;
+                box-sizing: border-box;
+                &:hover {
+                    color: #f7ccad;
+                }
+            }
+            .content__form__checkbox {
+                margin-top: 45px;
+                margin-right: auto;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                .box-container {
+                    width: 14px;
+                    height: 14px;
+                    border: 1px solid $gold;
+                    box-sizing: border-box;
+                    border-radius: 3px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .label {
+                    font-family: 'Open Sans';
+                    margin-left: 13px;
+                    font-size: 14px;
+                }
+                &:hover .box-container {
+                    box-shadow: 0px 0px 20px rgba(199, 133, 85, 0.2);
+                }
+            }
+        }
+        .content__outro {
+            max-width: 60%;
+            margin: 100px 0 150px 0;
+            p {
+                font-family: 'Montserrat';
+                font-size: 12px;
+            }
+            @media screen and (max-width: 767px) {
+                max-width: 300px;
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

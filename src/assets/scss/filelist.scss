@@ -1,0 +1,66 @@
+@import './main.scss';
+
+.files {
+  font-family: 'Open Sans';
+  font-size: 18px;
+  color: $white;
+  width: 100%;
+  .files__tabs {
+    padding-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid $gold;
+    .tab {
+      cursor: pointer;
+      &:not(:first-child) {
+        margin-left: 38px;
+      }
+      &:hover {
+        color: #f7ccad;
+      }
+    }
+    .activated {
+      color: $gold;
+    }
+  }
+  .files__content {
+    display: flex;
+    flex-direction: column;
+    .file {
+      padding: 40px 0;
+      border-bottom: 1px solid $gold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .file__info {
+        display: grid;
+        grid-template-areas: 
+        "a a a"
+        "b c d";
+        grid-gap: 7px;
+        .file__info__name {
+          grid-area: a; 
+        }
+        .file__info__size {
+          grid-area: b;
+          font-weight: 300;
+        }
+        .file__info__divider {
+          grid-area: c;
+          font-weight: 300;
+        }
+        .file__info__date {
+          grid-area: d;
+          font-weight: 300;
+        }
+      }
+      .file__download {
+        cursor: pointer;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
